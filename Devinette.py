@@ -5,7 +5,11 @@ TP2
 """
 import random
 
-def nombre()
+
+minimum, maximum = 0, 0
+
+
+def nombre():
     """
     cette fonction defini les nombres maximales et minimales
     """
@@ -14,20 +18,21 @@ def nombre()
     maximum = int(input("écrivez un nombre maximal"))
     print(f"vos numéro était sauvgarder. Maintenant essay de deviner le nombre que j'ai choisi entre {minimum} et {maximum}")
 
-def jeu_devinette ():
+
+def jeu_devinette():
 
     """
     fonction du jeu
     ce dernier détermine le nombre d'essaies, aide le joueur a deviner le nombre et lui offre de rejouer
     """
     nombre()
-    chiffre = random.randint (minimum,maximum)
+    chiffre = random.randint(minimum,maximum)
     chances_counter = 1
     chances = int(input("deviner le nombre:"))
-    while chances !=chiffre:
+    while chances != chiffre:
         if chances > chiffre:
             print("votre nombre est plus grand que le nombre choisi ")
-            chances_counter =  chances_counter + 1
+            chances_counter =chances_counter + 1
             chances = int(input("deviner un autre nombre "))
 
         else:
@@ -42,5 +47,6 @@ def jeu_devinette ():
         jeu_devinette()
     else:
         print("merci d'avoir joué, au revoir")
+
 
 jeu_devinette()
